@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaka Vatij Restro &amp; Bar | Calm dining in Itahari</title>
+<meta name="description" content="Kaka Vatij Restro &amp; Bar in Aapgachi, Itahari. Unhurried food, drinks and good company. See the menu and request a table on WhatsApp.">
+<meta property="og:title" content="Kaka Vatij Restro &amp; Bar">
+<meta property="og:description" content="Unhurried food, drinks and good company in Itahari.">
+<meta property="og:type" content="restaurant">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="theme-color" content="#1F332C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">Kaka Vatij</a>
+  <button class="burger" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><i></i><i></i><i></i></button>
+  <ul id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li class="dd">
+      <button class="dd-btn" aria-expanded="false">Explore &#9662;</button>
+      <ul class="dd-list">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Find us</a></li>
+      </ul>
+    </li>
+    <li><a class="btn" href="#reserve">Book a table</a></li>
+  </ul>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="moon" aria-hidden="true"></div>
+    <div class="hero-in">
+      <h1>Kaka Vatij<span>Restro &amp; Bar, Aapgachi, Itahari</span></h1>
+      <p>Slow evenings, honest food, and a table that waits for you.</p>
+      <div class="actions">
+        <a class="btn" href="#menu">Explore Menu</a>
+        <a class="btn ghost" href="#reserve">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>A quiet place to put the day down</h2>
+        <p>Kaka Vatij is a restro and bar in Aapgachi, Itahari, made for long conversations and unhurried meals.</p>
+        <p>Come for dinner, stay for the evening. Good food, cool drinks, and a table where nobody rushes you. Ask us about today&rsquo;s specials.</p>
+      </div>
+      <div class="imgs">
+        <div class="ph a1" role="img" aria-label="Inside Kaka Vatij"></div>
+        <div class="ph a2" role="img" aria-label="A plate from the kitchen"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="soft">
+    <div class="wrap">
+      <h2>The menu</h2>
+      <p>Prices are in Nepali rupees.</p>
+      <div class="filters" id="filters" role="group" aria-label="Filter menu by category"></div>
+      <div id="items"></div>
+    </div>
+  </section>
+
+  <section id="reserve">
+    <div class="wrap two-col">
+      <div>
+        <h2>Request a table</h2>
+        <p>Fill in your details and we&rsquo;ll open WhatsApp with your request ready to send. Your table is not confirmed until the restaurant replies on WhatsApp.</p>
+      </div>
+      <form id="rform" novalidate>
+        <label>Name<input name="name" autocomplete="name" required><span class="err"></span></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required><span class="err"></span></label>
+        <div class="two">
+          <label>Guests<input name="guests" type="number" min="1" max="30" value="2" required><span class="err"></span></label>
+          <label>Time<input name="time" type="time" required><span class="err"></span></label>
+        </div>
+        <label>Date<input name="date" type="date" required><span class="err"></span></label>
+        <label>Special requests (optional)<textarea name="notes" rows="3"></textarea></label>
+        <button class="btn" type="submit">Send request on WhatsApp</button>
+        <p id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="gallery" class="soft">
+    <div class="wrap">
+      <h2>Around the table</h2>
+      <div class="grid" id="grid"></div>
+      <p id="gnote" hidden>Add photos named gallery-1.jpg to gallery-6.jpg to the assets folder and they will appear here.</p>
+    </div>
+  </section>
+
+  <section id="reviews" class="lake">
+    <div class="wrap">
+      <h2>Kind words</h2>
+      <figure id="rev" aria-live="polite"><blockquote></blockquote><figcaption></figcaption></figure>
+      <div class="ctl">
+        <button id="rp" aria-label="Previous review">&lsaquo;</button>
+        <span id="rc"></span>
+        <button id="rn" aria-label="Next review">&rsaquo;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap two-col">
+      <div>
+        <h2>Find us</h2>
+        <p data-address></p>
+        <p><a data-phone></a></p>
+        <dl id="hours"></dl>
+        <p class="actions">
+          <a class="btn" data-directions target="_blank" rel="noopener">Get directions</a>
+          <a class="btn ghost-dark" data-wa target="_blank" rel="noopener">Message on WhatsApp</a>
+        </p>
+        <p class="social"><a data-social="facebook" target="_blank" rel="noopener">Facebook</a> <a data-social="instagram" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+      <iframe id="map" title="Map showing Kaka Vatij Restro and Bar" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Kaka Vatij Restro &amp; Bar</strong><p data-address></p><p><a data-phone></a></p></div>
+    <nav aria-label="Footer"><a href="#about">About</a><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#gallery">Gallery</a><a href="#contact">Find us</a></nav>
+    <p class="social"><a data-social="facebook" target="_blank" rel="noopener">Facebook</a> <a data-social="instagram" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> Kaka Vatij Restro &amp; Bar</p>
+</footer>
+
+<a class="wa" data-wa target="_blank" rel="noopener">WhatsApp</a>
+<button class="top" aria-label="Back to top">&uarr;</button>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <img alt="">
+  <div class="lbc">
+    <button id="lbp" aria-label="Previous photo">&lsaquo;</button>
+    <button id="lbx">Close</button>
+    <button id="lbn" aria-label="Next photo">&rsaquo;</button>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
